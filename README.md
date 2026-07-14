@@ -1,38 +1,46 @@
-YoutubeのURLから字幕データを取得して、要約する作業をする。
+# YoutubeのURLから字幕データを取得して、要約する作業をする。
 
 この作業をする際、仕事丸投げ、スキル活用、アプリ活用でどのような差が出るのかテストを行う
 
-テストの比較ポイント
+## テストの比較ポイント
+
 1. かかった時間（アプリの場合は要約時間と前後のアプリ処理時間を加える）
 2. 要約の精度
 3. トークン量（トークンコスト＝ドル換算）
 
-トークン量取得方法
-https://cursor.com/dashboard/usage からCSVをダウンロードする。
-ドル換算
-https://cursor.com/ja/docs/models-and-pricing　を参照する。
+### トークン量取得方法
 
+[https://cursor.com/dashboard/usage](https://cursor.com/dashboard/usage) からCSVをダウンロードする。
 
+### ドル換算
 
-活用するＡＩツール
+[https://cursor.com/ja/docs/models-and-pricing](https://cursor.com/ja/docs/models-and-pricing)　を参照する。
+
+## 活用するＡＩツール
+
 Cursor
 
-活用するＡＩモデル
-Cursorで一番安いモデルと、claudeで高価なモデルの遅い版で比較
-Composer2.5(Fastでない方)
-Claude-Opus-4.8-low-Thinking
+## 活用するＡＩモデル
 
-テスト方法
+Cursorで一番安いモデルと、claudeで高価なモデルの遅い版で比較
+
+- Composer2.5(Fastでない方)
+- Claude-Opus-4.8-low-Thinking
+
+## テスト方法
+
 仕事丸投げ、スキル活用、アプリ活用について、AIモデル単位に３回テストをする。
 
-テストを行う際は、完全に新規フォルダを作成して実施する。
+テストを行う際は、完全に新規フォルダを作成して実施する。  
 それぞれのフォルダに入れるものは、比較予定/の各フォルダ内容。
 
-仕事丸投げ、スキル活用、アプリ活用
-Composer2.5 ＝＞　３回
-Claude-Opus-4.8-low-Thinking　＝＞　３回
+### 仕事丸投げ、スキル活用、アプリ活用
 
-対象のURLは以下で固定
+- Composer2.5 ＝＞　３回
+- Claude-Opus-4.8-low-Thinking　＝＞　３回
+
+## 対象のURLは以下で固定
+
 https://www.youtube.com/watch?v=koBLOf-53_g
 
 要約の精度が同程度になるように、プロンプトは編集済。
@@ -40,6 +48,5 @@ https://www.youtube.com/watch?v=koBLOf-53_g
 時間測定は、プロンプト入力直前から結果出力後までの全体
 
 要約の結果は、全作業終了後に以下のプロンプトで比較予定
-要約比較プロンプト.md
 
-
+- [要約比較プロンプト.md](要約比較プロンプト.md)
